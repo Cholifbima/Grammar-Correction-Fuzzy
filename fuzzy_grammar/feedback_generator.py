@@ -30,7 +30,7 @@ class FeedbackGenerator:
         # Resources for different grammar topics
         self.resources = {
             'Subject-verb agreement': {
-                'url': 'https://www.grammarly.com/blog/subject-verb-agreement/',
+                'url': 'https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html',
                 'type': 'Subject-Verb Agreement'
             },
             'Verb form error': {
