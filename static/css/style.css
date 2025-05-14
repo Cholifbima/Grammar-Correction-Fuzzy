@@ -1,0 +1,211 @@
+/* Custom styles for Fuzzy Grammar Tutor */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* Interactive text container styles */
+.interactive-text-container {
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#interactive-text {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 2;
+    display: inline; /* Ensure text flows horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure error highlights don't break the horizontal flow */
+.error-highlight {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Severity badge colors */
+#severity-badge.badge {
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+}
+
+#severity-badge.Low {
+    background-color: #198754;  /* Bootstrap success color */
+}
+
+#severity-badge.Medium {
+    background-color: #ffc107;  /* Bootstrap warning color */
+    color: #212529;
+}
+
+#severity-badge.High {
+    background-color: #dc3545;  /* Bootstrap danger color */
+}
+
+/* Feedback items */
+.feedback-item {
+    border-left: 3px solid #6c757d;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-item.Subject-verb-agreement {
+    border-left-color: #dc3545;  /* red */
+}
+
+.feedback-item.Article-error {
+    border-left-color: #fd7e14;  /* orange */
+}
+
+.feedback-item.Preposition-error {
+    border-left-color: #ffc107;  /* yellow */
+}
+
+.feedback-item.Sentence-fragment {
+    border-left-color: #6f42c1;  /* purple */
+}
+
+.feedback-item.Double-negation {
+    border-left-color: #0d6efd;  /* blue */
+}
+
+.feedback-item.Verb-form-error {
+    border-left-color: #20c997;  /* teal */
+}
+
+/* Error text highlighting */
+.error-text {
+    background-color: rgba(255, 193, 7, 0.2);  /* light yellow */
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* Interactive text error highlighting */
+.error-highlight {
+    background-color: rgba(220, 53, 69, 0.2);  /* light red */
+    text-decoration: underline wavy #dc3545;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.error-highlight:hover {
+    background-color: rgba(220, 53, 69, 0.3);
+}
+
+/* Custom tooltip */
+.grammar-tooltip {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    display: none;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.error-highlight:hover .grammar-tooltip {
+    display: block;
+}
+
+.tooltip-suggestion {
+    color: #198754;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Corrected text highlight */
+.correction-highlight {
+    background-color: rgba(25, 135, 84, 0.1);  /* light green */
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* Visualization section */
+.visualization-container {
+    background-color: #fff;
+    border-radius: 0.25rem;
+}
+
+/* Fuzzy logic diagram */
+.fuzzy-diagram {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom card height for equal card heights */
+.card-equal-height {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-equal-height .card-body {
+    flex: 1;
+}
+
+/* Loading spinner */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .grammar-tooltip {
+        max-width: 200px;
+    }
+}
+
+/* Grammar accuracy chart styles */
+.grammar-accuracy-chart {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.grammar-accuracy-chart canvas {
+    position: relative;
+    z-index: 1;
+}
+
+.grammar-accuracy-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    font-weight: bold;
+    z-index: 2;
+} 
